@@ -1,30 +1,45 @@
-Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 99077 .
-[==========] Running 5 tests from 1 test case.
-[----------] Global test environment set-up.
-[----------] 5 tests from StockProfit
-[ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (2 ms)
-[ RUN      ] StockProfit.Get_max_profit_after_buy_for_empty_prices
-[       OK ] StockProfit.Get_max_profit_after_buy_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.One_day_prices
-[       OK ] StockProfit.One_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profit_after_buy_for_one_day_prices
-StockProfit.tests.cpp:44: Failure
-Value of: stockProfit.getMaxProfitsAfterBuy()
-  Actual: {}
-Expected: expectMaxProfitsAfterBuy
-Which is: { -1 }
-[  FAILED  ] StockProfit.Get_max_profit_after_buy_for_one_day_prices (1 ms)
-[ RUN      ] StockProfit.Two_day_prices
-[       OK ] StockProfit.Two_day_prices (0 ms)
-[----------] 5 tests from StockProfit (3 ms total)
-
-[----------] Global test environment tear-down
-[==========] 5 tests from 1 test case ran. (4 ms total)
-[  PASSED  ] 4 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] StockProfit.Get_max_profit_after_buy_for_one_day_prices
-
- 1 FAILED TEST
-make: *** [test.output] Error 1
+StockProfit.cpp:9:17: error: invalid operands to binary expression ('vector<int>' and 'int')
+    if (prices_ == 1) {
+        ~~~~~~~ ^  ~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_pair.h:214:5: note: candidate template ignored: could not match 'pair' against 'vector'
+    operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_iterator.h:291:5: note: candidate template ignored: could not match 'reverse_iterator' against 'vector'
+    operator==(const reverse_iterator<_Iterator>& __x,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_iterator.h:341:5: note: candidate template ignored: could not match 'reverse_iterator' against 'vector'
+    operator==(const reverse_iterator<_IteratorL>& __x,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_iterator.h:805:5: note: candidate template ignored: could not match '__normal_iterator' against 'vector'
+    operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_iterator.h:811:5: note: candidate template ignored: could not match '__normal_iterator' against 'vector'
+    operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_iterator.h:1031:5: note: candidate template ignored: could not match 'move_iterator' against 'vector'
+    operator==(const move_iterator<_IteratorL>& __x,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_iterator.h:1037:5: note: candidate template ignored: could not match 'move_iterator' against 'vector'
+    operator==(const move_iterator<_Iterator>& __x,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ext/new_allocator.h:139:5: note: candidate template ignored: could not match 'new_allocator' against 'vector'
+    operator==(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/allocator.h:128:5: note: candidate template ignored: could not match 'allocator' against 'vector'
+    operator==(const allocator<_T1>&, const allocator<_T2>&)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/allocator.h:133:5: note: candidate template ignored: could not match 'allocator' against 'vector'
+    operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_vector.h:1404:5: note: candidate template ignored: could not match 'vector<type-parameter-0-0, type-parameter-0-1>' against 'int'
+    operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+    ^
+StockProfit.cpp:10:39: error: use of undeclared identifier 'prices'; did you mean 'prices_'?
+        maxProfitsAfterBuy.push_back(-prices[0]);
+                                      ^~~~~~
+                                      prices_
+./StockProfit.hpp:23:17: note: 'prices_' declared here
+    vector<int> prices_;
+                ^
+2 errors generated.
+make: *** [test] Error 1
