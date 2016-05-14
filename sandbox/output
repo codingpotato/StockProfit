@@ -1,7 +1,3 @@
-StockProfit.cpp:3:38: error: unused parameter 'prices' [-Werror,-Wunused-parameter]
-StockProfit::StockProfit(vector<int> prices) {
-                                     ^
-1 error generated.
 StockProfit.tests.cpp:11:47: error: no member named 'getTransactions' in 'StockProfit'
     ASSERT_EQ(expectTransactions, stockProfit.getTransactions);
                                   ~~~~~~~~~~~ ^

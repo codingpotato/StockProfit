@@ -10,6 +10,9 @@ class StockProfit {
 public:
     StockProfit(vector<int> prices);
 
+private:
+    vector<int> prices_;
+
 };
 
 #endif
