@@ -42,9 +42,7 @@ void StockProfit::calculateProfits() {
     }
     for (unsigned int i = 0; i < prices_.size(); ++i) {
         int profit = -prices_[i];
-        if (i > 1) {
-            profit += maxProfits_[i - 2];
-        }
+        profit += i > 1 ? maxProfits_[i - 2] : 0;
         maxProfitsAfterBuy_[i] = profit;
         maxProfitsWithStockInHand_[i] = profit;
         if (i > 0) {
