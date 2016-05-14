@@ -1,30 +1,20 @@
-Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 71548 .
-[==========] Running 10 tests from 1 test case.
-[----------] Global test environment set-up.
-[----------] 10 tests from StockProfit
-[ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (1 ms)
-[ RUN      ] StockProfit.Two_day_prices
-[       OK ] StockProfit.Two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_four_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_four_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.One_day_prices
-[       OK ] StockProfit.One_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_for_one_day_prices (0 ms)
-[----------] 10 tests from StockProfit (3 ms total)
-
-[----------] Global test environment tear-down
-[==========] 10 tests from 1 test case ran. (4 ms total)
-[  PASSED  ] 10 tests.
+StockProfit.tests.cpp:29:21: error: no member named 'getMaxProfitsWithStockInHand' in 'StockProfit'
+        stockProfit.getMaxProfitsWithStockInHand());
+        ~~~~~~~~~~~ ^
+/usr/include/gtest/gtest.h:1889:54: note: expanded from macro 'ASSERT_EQ'
+# define ASSERT_EQ(val1, val2) GTEST_ASSERT_EQ(val1, val2)
+                                                     ^
+/usr/include/gtest/gtest.h:1873:33: note: expanded from macro 'GTEST_ASSERT_EQ'
+                      expected, actual)
+                                ^
+/usr/include/gtest/gtest_pred_impl.h:166:40: note: expanded from macro 'ASSERT_PRED_FORMAT2'
+  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_FATAL_FAILURE_)
+                                       ^
+/usr/include/gtest/gtest_pred_impl.h:147:43: note: expanded from macro 'GTEST_PRED_FORMAT2_'
+  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\
+                                          ^
+/usr/include/gtest/gtest_pred_impl.h:77:52: note: expanded from macro 'GTEST_ASSERT_'
+  if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                   ^
+1 error generated.
+make: *** [test] Error 1
