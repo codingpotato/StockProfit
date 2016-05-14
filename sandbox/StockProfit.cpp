@@ -6,9 +6,9 @@ StockProfit::StockProfit(vector<int> prices)
 
 vector<vector<int>> StockProfit::getTransactions() {
     vector<vector<int>> transactions;
-    if (prices.size() == 1) {
+    if (prices_.size() == 1) {
         vector<int> transaction;
-        transaction.push_bakc(PASS);
+        transaction.push_back(PASS);
         transactions.push_back(transaction);
     }
     return transactions;
