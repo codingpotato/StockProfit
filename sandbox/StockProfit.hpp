@@ -5,6 +5,12 @@
 
 using namespace std;
 
+
+enum Transaction {
+    PASS, BUY, SELL, COOLDOWN
+};
+
+
 class StockProfit {
 
 public:
