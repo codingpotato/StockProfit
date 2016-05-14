@@ -44,11 +44,9 @@ void StockProfit::calculateProfits() {
     maxProfitsAfterBuy_[0] = -prices_[0];
     maxProfitsWithStockInHand_[0] = maxProfitsAfterBuy_[0];
     for (unsigned int i = 1; i < prices_.size(); ++i) {
-        int profit = -prices_[i];
-        profit += i > 1 ? maxProfits_[i - 2] : 0;
-        maxProfitsAfterBuy_[i] = profit;
-        maxProfitsWithStockInHand_[i] = profit;
-        maxProfitsWithStockInHand_[i] = max(profit, 
-            maxProfitsAfterBuy_[i - 1]);
+        maxProfitsAfterBuy_[i] = (i > 1 ? maxProfits_[i - 2] : 0)
+            - prices_[i];
+        maxProfitsWithStockInHand_[i] = max(maxProfitsAfterBuy_[i - 1],
+            maxProfitsAfterBuy_[i];
     }
 }
