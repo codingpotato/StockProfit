@@ -31,6 +31,8 @@ private:
     vector<int> maxProfitsAfterSell_;
     vector<int> maxProfits_;
 
+    vector<vector<int>> transactions_;
+
 };
 
 #endif
