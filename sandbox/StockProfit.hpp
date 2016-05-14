@@ -16,6 +16,7 @@ class StockProfit {
 public:
     StockProfit(vector<int> prices);
 
+    vector<int> getMaxProfitsAfterBuy();
     vector<vector<int>> getTransactions();
 
 private:

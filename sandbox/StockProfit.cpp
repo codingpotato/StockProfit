@@ -4,6 +4,11 @@ StockProfit::StockProfit(vector<int> prices)
     : prices_(prices) {
 }
 
+vector<int> StockProfit::getMaxProfitsAfterBuy() {
+    vector<int> maxProfitsAfterBuy;
+    return maxProfitsAfterBuy;
+}
+
 vector<vector<int>> StockProfit::getTransactions() {
     vector<vector<int>> transactions;
     if (prices_.size() == 1) {
