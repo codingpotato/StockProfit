@@ -1,58 +1,86 @@
-Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 57131 .
-[==========] Running 24 tests from 1 test case.
-[----------] Global test environment set-up.
-[----------] 24 tests from StockProfit
-[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_three_day_prices
-[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_three_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_sell_for_three_day_prices
-[       OK ] StockProfit.Get_max_profits_after_sell_for_three_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_four_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_four_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_sell_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_after_sell_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy
-[       OK ] StockProfit.Get_max_profits_after_buy (0 ms)
-[ RUN      ] StockProfit.One_day_prices
-[       OK ] StockProfit.One_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_two_day_descending_prices
-[       OK ] StockProfit.Get_max_profits_for_two_day_descending_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_three_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_three_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_three_day_prices
-[       OK ] StockProfit.Get_max_profits_for_three_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Two_day_prices
-[       OK ] StockProfit.Two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits
-[       OK ] StockProfit.Get_max_profits (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_four_day_prices
-[       OK ] StockProfit.Get_max_profits_for_four_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_sell_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_after_sell_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_sell_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_after_sell_for_one_day_prices (0 ms)
-[----------] 24 tests from StockProfit (5 ms total)
-
-[----------] Global test environment tear-down
-[==========] 24 tests from 1 test case ran. (6 ms total)
-[  PASSED  ] 24 tests.
+StockProfit.tests.cpp:191:1: error: redefinition of 'StockProfit_Two_day_prices_Test'
+TEST(StockProfit, Two_day_prices) {
+^
+/usr/include/gtest/gtest.h:2120:42: note: expanded from macro 'TEST'
+# define TEST(test_case_name, test_name) GTEST_TEST(test_case_name, test_name)
+                                         ^
+/usr/include/gtest/gtest.h:2114:3: note: expanded from macro 'GTEST_TEST'
+  GTEST_TEST_(test_case_name, test_name, \
+  ^
+/usr/include/gtest/internal/gtest-internal.h:1205:7: note: expanded from macro 'GTEST_TEST_'
+class GTEST_TEST_CLASS_NAME_(test_case_name, test_name) : public parent_class {\
+      ^
+/usr/include/gtest/internal/gtest-internal.h:1201:3: note: expanded from macro 'GTEST_TEST_CLASS_NAME_'
+  test_case_name##_##test_name##_Test
+  ^
+<scratch space>:87:1: note: expanded from here
+StockProfit_Two_day_prices_Test
+^
+StockProfit.tests.cpp:114:1: note: previous definition is here
+TEST(StockProfit, Two_day_prices) {
+^
+/usr/include/gtest/gtest.h:2120:42: note: expanded from macro 'TEST'
+# define TEST(test_case_name, test_name) GTEST_TEST(test_case_name, test_name)
+                                         ^
+/usr/include/gtest/gtest.h:2114:3: note: expanded from macro 'GTEST_TEST'
+  GTEST_TEST_(test_case_name, test_name, \
+  ^
+/usr/include/gtest/internal/gtest-internal.h:1205:7: note: expanded from macro 'GTEST_TEST_'
+class GTEST_TEST_CLASS_NAME_(test_case_name, test_name) : public parent_class {\
+      ^
+/usr/include/gtest/internal/gtest-internal.h:1201:3: note: expanded from macro 'GTEST_TEST_CLASS_NAME_'
+  test_case_name##_##test_name##_Test
+  ^
+<scratch space>:55:1: note: expanded from here
+StockProfit_Two_day_prices_Test
+^
+StockProfit.tests.cpp:191:1: error: redefinition of 'test_info_'
+TEST(StockProfit, Two_day_prices) {
+^
+/usr/include/gtest/gtest.h:2120:42: note: expanded from macro 'TEST'
+# define TEST(test_case_name, test_name) GTEST_TEST(test_case_name, test_name)
+                                         ^
+/usr/include/gtest/gtest.h:2114:3: note: expanded from macro 'GTEST_TEST'
+  GTEST_TEST_(test_case_name, test_name, \
+  ^
+/usr/include/gtest/internal/gtest-internal.h:1216:5: note: expanded from macro 'GTEST_TEST_'
+  ::test_info_ =\
+    ^
+StockProfit.tests.cpp:114:1: note: previous definition is here
+TEST(StockProfit, Two_day_prices) {
+^
+/usr/include/gtest/gtest.h:2120:42: note: expanded from macro 'TEST'
+# define TEST(test_case_name, test_name) GTEST_TEST(test_case_name, test_name)
+                                         ^
+/usr/include/gtest/gtest.h:2114:3: note: expanded from macro 'GTEST_TEST'
+  GTEST_TEST_(test_case_name, test_name, \
+  ^
+/usr/include/gtest/internal/gtest-internal.h:1216:5: note: expanded from macro 'GTEST_TEST_'
+  ::test_info_ =\
+    ^
+StockProfit.tests.cpp:191:1: error: redefinition of 'TestBody'
+TEST(StockProfit, Two_day_prices) {
+^
+/usr/include/gtest/gtest.h:2120:42: note: expanded from macro 'TEST'
+# define TEST(test_case_name, test_name) GTEST_TEST(test_case_name, test_name)
+                                         ^
+/usr/include/gtest/gtest.h:2114:3: note: expanded from macro 'GTEST_TEST'
+  GTEST_TEST_(test_case_name, test_name, \
+  ^
+/usr/include/gtest/internal/gtest-internal.h:1224:57: note: expanded from macro 'GTEST_TEST_'
+void GTEST_TEST_CLASS_NAME_(test_case_name, test_name)::TestBody()
+                                                        ^
+StockProfit.tests.cpp:114:1: note: previous definition is here
+TEST(StockProfit, Two_day_prices) {
+^
+/usr/include/gtest/gtest.h:2120:42: note: expanded from macro 'TEST'
+# define TEST(test_case_name, test_name) GTEST_TEST(test_case_name, test_name)
+                                         ^
+/usr/include/gtest/gtest.h:2114:3: note: expanded from macro 'GTEST_TEST'
+  GTEST_TEST_(test_case_name, test_name, \
+  ^
+/usr/include/gtest/internal/gtest-internal.h:1224:57: note: expanded from macro 'GTEST_TEST_'
+void GTEST_TEST_CLASS_NAME_(test_case_name, test_name)::TestBody()
+                                                        ^
+3 errors generated.
+make: *** [test] Error 1
