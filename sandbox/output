@@ -1,36 +1,24 @@
-Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 2318 .
-[==========] Running 13 tests from 1 test case.
-[----------] Global test environment set-up.
-[----------] 13 tests from StockProfit
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_four_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_four_day_prices (2 ms)
-[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Two_day_prices
-[       OK ] StockProfit.Two_day_prices (0 ms)
-[ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.One_day_prices
-[       OK ] StockProfit.One_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices (0 ms)
-[----------] 13 tests from StockProfit (6 ms total)
-
-[----------] Global test environment tear-down
-[==========] 13 tests from 1 test case ran. (7 ms total)
-[  PASSED  ] 13 tests.
+StockProfit.tests.cpp:38:21: error: no member named 'getMaxProfitsAfterSell' in 'StockProfit'; did you mean 'getMaxProfitsAfterBuy'?
+        stockProfit.getMaxProfitsAfterSell());
+                    ^~~~~~~~~~~~~~~~~~~~~~
+                    getMaxProfitsAfterBuy
+/usr/include/gtest/gtest.h:1889:54: note: expanded from macro 'ASSERT_EQ'
+# define ASSERT_EQ(val1, val2) GTEST_ASSERT_EQ(val1, val2)
+                                                     ^
+/usr/include/gtest/gtest.h:1873:33: note: expanded from macro 'GTEST_ASSERT_EQ'
+                      expected, actual)
+                                ^
+/usr/include/gtest/gtest_pred_impl.h:166:40: note: expanded from macro 'ASSERT_PRED_FORMAT2'
+  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_FATAL_FAILURE_)
+                                       ^
+/usr/include/gtest/gtest_pred_impl.h:147:43: note: expanded from macro 'GTEST_PRED_FORMAT2_'
+  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\
+                                          ^
+/usr/include/gtest/gtest_pred_impl.h:77:52: note: expanded from macro 'GTEST_ASSERT_'
+  if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                   ^
+./StockProfit.hpp:19:17: note: 'getMaxProfitsAfterBuy' declared here
+    vector<int> getMaxProfitsAfterBuy();
+                ^
+1 error generated.
+make: *** [test] Error 1

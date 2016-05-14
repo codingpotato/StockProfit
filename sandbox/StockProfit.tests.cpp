@@ -29,6 +29,15 @@ TEST(StockProfit, Get_max_profits_with_stock_in_hand_for_empty_prices) {
         stockProfit.getMaxProfitsWithStockInHand());
 }
 
+TEST(StockProfit, Get_max_profits_after_sell_for_empty_prices) {
+    vector<int> prices;
+    vector<int> expectMaxProfitsAfterSell;
+
+    StockProfit stockProfit(prices);
+    ASSERT_EQ(expectMaxProfitsAfterSell,
+        stockProfit.getMaxProfitsAfterSell());
+}
+
 TEST(StockProfit, Get_max_profits_for_empty_prices) {
     vector<int> prices;
     vector<int> expectMaxProfits;
