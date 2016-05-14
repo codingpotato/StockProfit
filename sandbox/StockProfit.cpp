@@ -46,8 +46,8 @@ void StockProfit::generateTransactionsByFindBuySellPair() {
     int sell = 1;
     int buy = 0;
     vector<int> transaction(prices_.size());
-    transactions[buy] = BUY;
-    transactions[sell] = SELL;
+    transaction[buy] = BUY;
+    transaction[sell] = SELL;
     transactions_.push_back(transaction);
 }
 
