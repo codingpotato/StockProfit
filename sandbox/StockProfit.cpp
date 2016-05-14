@@ -42,13 +42,10 @@ vector<vector<int>> StockProfit::getTransactions() {
 
 void StockProfit::calculateProfits() {
     if (prices_.size() == 0) return;
-    if (prices_.size() > 1) {
-        maxProfits_[0] = 0;
-        maxProfits_[1] = max(maxProfits_[0], prices_[1] - prices_[0]);
-    }
     maxProfitsAfterBuy_[0] = -prices_[0];
     maxProfitsWithStockInHand_[0] = maxProfitsAfterBuy_[0];
     maxProfitsAfterSell_[0] = 0;
+    maxProfits_[0] = 0;
     for (unsigned int i = 1; i < prices_.size(); ++i) {
         maxProfitsAfterBuy_[i] = (i > 1 ? maxProfits_[i - 2] : 0)
             - prices_[i];
@@ -56,5 +53,6 @@ void StockProfit::calculateProfits() {
             maxProfitsWithStockInHand_[i - 1], maxProfitsAfterBuy_[i]);
         maxProfitsAfterSell_[i] = maxProfitsWithStockInHand_[i - 1]
             + prices_[i];
+        maxProfits_[i] = max(maxProfits_[i - 1], maxProfitsAfterSell_[i]);
     }
 }
