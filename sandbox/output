@@ -1,28 +1,40 @@
 Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 49548 .
-[==========] Running 9 tests from 1 test case.
+Note: Randomizing tests' orders with a seed of 27946 .
+[==========] Running 10 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 9 tests from StockProfit
+[----------] 10 tests from StockProfit
+[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_for_empty_prices (1 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_four_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_four_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
+[ RUN      ] StockProfit.Empty_prices
+[       OK ] StockProfit.Empty_prices (1 ms)
 [ RUN      ] StockProfit.One_day_prices
-[       OK ] StockProfit.One_day_prices (1 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_for_one_day_prices (0 ms)
+[       OK ] StockProfit.One_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_two_day_prices
+StockProfit.tests.cpp:104: Failure
+Value of: stockProfit.getMaxProfits()
+  Actual: { 0, -1 }
+Expected: expectMaxProfits
+Which is: { 0, 0 }
+[  FAILED  ] StockProfit.Get_max_profits_for_two_day_prices (2 ms)
 [ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
 [       OK ] StockProfit.Get_max_profits_after_buy_for_empty_prices (0 ms)
 [ RUN      ] StockProfit.Two_day_prices
 [       OK ] StockProfit.Two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_four_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_four_day_prices (0 ms)
-[----------] 9 tests from StockProfit (3 ms total)
+[ RUN      ] StockProfit.Get_max_profits_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_for_one_day_prices (1 ms)
+[----------] 10 tests from StockProfit (6 ms total)
 
 [----------] Global test environment tear-down
-[==========] 9 tests from 1 test case ran. (4 ms total)
+[==========] 10 tests from 1 test case ran. (8 ms total)
 [  PASSED  ] 9 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] StockProfit.Get_max_profits_for_two_day_prices
+
+ 1 FAILED TEST
+make: *** [test.output] Error 1
