@@ -4,5 +4,5 @@
 #include <vector>
 
 using namespace std;
- 
+
 #endif

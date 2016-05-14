@@ -1,5 +1,5 @@
-StockProfit.hpp:7:1: error: treating Unicode character as whitespace [-Werror,-Wunicode-whitespace]
- 
-^
+StockProfit.tests.cpp:10:5: error: unknown type name 'StockProfit'
+    StockProfit stockProfit(prices);
+    ^
 1 error generated.
-make: *** [StockProfit.compiled_hpp] Error 1
+make: *** [test] Error 1
