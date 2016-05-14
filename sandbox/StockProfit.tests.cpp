@@ -188,7 +188,7 @@ TEST(StockProfit, Get_max_profits_for_two_day_descending_prices) {
     ASSERT_EQ(expectMaxProfits, stockProfit.getMaxProfits());
 }
 
-TEST(StockProfit, Two_day_prices) {
+TEST(StockProfit, Three_day_prices) {
     int pricesValue[] = {1, 2, 3};
     int pricesLength = sizeof(pricesValue) / sizeof(int);
     vector<int> prices(pricesValue, pricesValue + pricesLength);
