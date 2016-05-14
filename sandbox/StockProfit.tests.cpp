@@ -6,6 +6,7 @@ using namespace ::testing;
 TEST(StockProfit, Empty_prices) {
     vector<int> prices;
     vector<vector<int>> expectTransactions;
+
     StockProfit stockProfit(prices);
     ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
 }
@@ -13,8 +14,10 @@ TEST(StockProfit, Empty_prices) {
 TEST(StockProfit, Get_max_profit_after_buy_for_empty_prices) {
     vector<int> prices;
     vector<int> expectMaxProfitsAfterBuy;
+
     StockProfit stockProfit(prices);
-    ASSERT_EQ(expectTransactions, stockProfit.getMaxProfitsAfterBuy());
+    ASSERT_EQ(expectMaxProfitsAfterBuy,
+        stockProfit.getMaxProfitsAfterBuy());
 }
 
 TEST(StockProfit, One_day_prices) {
