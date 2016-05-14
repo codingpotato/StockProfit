@@ -1,22 +1,12 @@
-Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 984 .
-[==========] Running 6 tests from 1 test case.
-[----------] Global test environment set-up.
-[----------] 6 tests from StockProfit
-[ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (1 ms)
-[ RUN      ] StockProfit.One_day_prices
-[       OK ] StockProfit.One_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profit_after_buy_for_two_day_prices
-[       OK ] StockProfit.Get_max_profit_after_buy_for_two_day_prices (1 ms)
-[ RUN      ] StockProfit.Two_day_prices
-[       OK ] StockProfit.Two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profit_after_buy_for_one_day_prices
-[       OK ] StockProfit.Get_max_profit_after_buy_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profit_after_buy_for_empty_prices
-[       OK ] StockProfit.Get_max_profit_after_buy_for_empty_prices (0 ms)
-[----------] 6 tests from StockProfit (2 ms total)
-
-[----------] Global test environment tear-down
-[==========] 6 tests from 1 test case ran. (4 ms total)
-[  PASSED  ] 6 tests.
+StockProfit.cpp:9:25: error: use of undeclared identifier 'princes_'; did you mean 'prices_'?
+    for (int i = 0; i < princes_.size(); ++i) {
+                        ^~~~~~~~
+                        prices_
+./StockProfit.hpp:23:17: note: 'prices_' declared here
+    vector<int> prices_;
+                ^
+StockProfit.cpp:9:23: error: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Werror,-Wsign-compare]
+    for (int i = 0; i < princes_.size(); ++i) {
+                    ~ ^ ~~~~~~~~~~~~~~~
+2 errors generated.
+make: *** [test] Error 1
