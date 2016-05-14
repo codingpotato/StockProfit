@@ -10,6 +10,11 @@ vector<vector<int>> StockProfit::getTransactions() {
         vector<int> transaction;
         transaction.push_back(PASS);
         transactions.push_back(transaction);
+    } else if (prices_.size() == 2) {
+        vector<int> transaction;
+        transaction.push_back(BUY);
+        transaction.push_back(SELL);
+        transactions.push_back(transaction);
     }
     return transactions;
 }
