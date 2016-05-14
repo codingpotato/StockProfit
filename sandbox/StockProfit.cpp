@@ -4,6 +4,7 @@ StockProfit::StockProfit(vector<int> prices)
     : prices_(prices),
       maxProfitsAfterBuy_(prices.size()),
       maxProfitsWithStockInHand_(prices.size()),
+      maxProfitsAfterSell_(prices.size()),
       maxProfits_(prices.size()) {
     calculateProfits();
 }
@@ -14,6 +15,10 @@ vector<int> StockProfit::getMaxProfitsAfterBuy() {
 
 vector<int> StockProfit::getMaxProfitsWithStockInHand() {
     return maxProfitsWithStockInHand_;
+}
+
+vector<int> StockProfit::getMaxProfitsAfterSell() {
+    return maxProfitsAfterSell_;
 }
 
 vector<int> StockProfit::getMaxProfits() {

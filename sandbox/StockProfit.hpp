@@ -18,6 +18,7 @@ public:
 
     vector<int> getMaxProfitsAfterBuy();
     vector<int> getMaxProfitsWithStockInHand();
+    vector<int> getMaxProfitsAfterSell();
     vector<int> getMaxProfits();
     vector<vector<int>> getTransactions();
 
@@ -27,6 +28,7 @@ private:
     vector<int> prices_;
     vector<int> maxProfitsAfterBuy_;
     vector<int> maxProfitsWithStockInHand_;
+    vector<int> maxProfitsAfterSell_;
     vector<int> maxProfits_;
 
 };
