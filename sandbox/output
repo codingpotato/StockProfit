@@ -1,16 +1,76 @@
-Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 28478 .
-[==========] Running 3 tests from 1 test case.
-[----------] Global test environment set-up.
-[----------] 3 tests from StockProfit
-[ RUN      ] StockProfit.One_day_prices
-[       OK ] StockProfit.One_day_prices (2 ms)
-[ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (0 ms)
-[ RUN      ] StockProfit.Two_day_prices
-[       OK ] StockProfit.Two_day_prices (1 ms)
-[----------] 3 tests from StockProfit (3 ms total)
-
-[----------] Global test environment tear-down
-[==========] 3 tests from 1 test case ran. (4 ms total)
-[  PASSED  ] 3 tests.
+StockProfit.tests.cpp:17:15: error: use of undeclared identifier 'expectTransactions'
+    ASSERT_EQ(expectTransactions, stockProfit.getMaxProfitsAfterBuy());
+              ^
+/usr/include/gtest/gtest.h:1889:48: note: expanded from macro 'ASSERT_EQ'
+# define ASSERT_EQ(val1, val2) GTEST_ASSERT_EQ(val1, val2)
+                                               ^
+/usr/include/gtest/gtest.h:1872:55: note: expanded from macro 'GTEST_ASSERT_EQ'
+                      EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                      ^
+/usr/include/gtest/internal/gtest-internal.h:162:54: note: expanded from macro 'GTEST_IS_NULL_LITERAL_'
+    (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                     ^
+/usr/include/gtest/gtest_pred_impl.h:166:23: note: expanded from macro 'ASSERT_PRED_FORMAT2'
+  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_FATAL_FAILURE_)
+                      ^
+/usr/include/gtest/gtest_pred_impl.h:147:17: note: expanded from macro 'GTEST_PRED_FORMAT2_'
+  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\
+                ^
+/usr/include/gtest/gtest_pred_impl.h:77:52: note: expanded from macro 'GTEST_ASSERT_'
+  if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                   ^
+StockProfit.tests.cpp:17:5: error: no type named 'Compare' in the global namespace
+    ASSERT_EQ(expectTransactions, stockProfit.getMaxProfitsAfterBuy());
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/gtest/gtest.h:1889:32: note: expanded from macro 'ASSERT_EQ'
+# define ASSERT_EQ(val1, val2) GTEST_ASSERT_EQ(val1, val2)
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/gtest/gtest.h:1872:67: note: expanded from macro 'GTEST_ASSERT_EQ'
+                      EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ~~^
+/usr/include/gtest/gtest_pred_impl.h:166:23: note: expanded from macro 'ASSERT_PRED_FORMAT2'
+  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_FATAL_FAILURE_)
+                      ^
+/usr/include/gtest/gtest_pred_impl.h:147:17: note: expanded from macro 'GTEST_PRED_FORMAT2_'
+  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\
+                ^
+/usr/include/gtest/gtest_pred_impl.h:77:52: note: expanded from macro 'GTEST_ASSERT_'
+  if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                   ^
+StockProfit.tests.cpp:17:5: error: expected ')'
+/usr/include/gtest/gtest.h:1889:32: note: expanded from macro 'ASSERT_EQ'
+# define ASSERT_EQ(val1, val2) GTEST_ASSERT_EQ(val1, val2)
+                               ^
+/usr/include/gtest/gtest.h:1871:3: note: expanded from macro 'GTEST_ASSERT_EQ'
+  ASSERT_PRED_FORMAT2(::testing::internal:: \
+  ^
+/usr/include/gtest/gtest_pred_impl.h:166:3: note: expanded from macro 'ASSERT_PRED_FORMAT2'
+  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_FATAL_FAILURE_)
+  ^
+/usr/include/gtest/gtest_pred_impl.h:147:29: note: expanded from macro 'GTEST_PRED_FORMAT2_'
+  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\
+                            ^
+<scratch space>:98:1: note: expanded from here
+"expectTransactions"
+^
+/usr/include/gtest/gtest_pred_impl.h:77:52: note: expanded from macro 'GTEST_ASSERT_'
+  if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                   ^
+StockProfit.tests.cpp:17:5: note: to match this '('
+/usr/include/gtest/gtest.h:1889:32: note: expanded from macro 'ASSERT_EQ'
+# define ASSERT_EQ(val1, val2) GTEST_ASSERT_EQ(val1, val2)
+                               ^
+/usr/include/gtest/gtest.h:1871:3: note: expanded from macro 'GTEST_ASSERT_EQ'
+  ASSERT_PRED_FORMAT2(::testing::internal:: \
+  ^
+/usr/include/gtest/gtest_pred_impl.h:166:3: note: expanded from macro 'ASSERT_PRED_FORMAT2'
+  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_FATAL_FAILURE_)
+  ^
+/usr/include/gtest/gtest_pred_impl.h:147:28: note: expanded from macro 'GTEST_PRED_FORMAT2_'
+  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\
+                           ^
+/usr/include/gtest/gtest_pred_impl.h:77:52: note: expanded from macro 'GTEST_ASSERT_'
+  if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                   ^
+3 errors generated.
+make: *** [test] Error 1

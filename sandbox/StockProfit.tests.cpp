@@ -3,16 +3,21 @@
 
 using namespace ::testing;
 
-TEST(StockProfit, Empty_prices)
-{
+TEST(StockProfit, Empty_prices) {
     vector<int> prices;
     vector<vector<int>> expectTransactions;
     StockProfit stockProfit(prices);
     ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
 }
 
-TEST(StockProfit, One_day_prices)
-{
+TEST(StockProfit, Get_max_profit_after_buy_for_empty_prices) {
+    vector<int> prices;
+    vector<int> expectMaxProfitsAfterBuy;
+    StockProfit stockProfit(prices);
+    ASSERT_EQ(expectTransactions, stockProfit.getMaxProfitsAfterBuy());
+}
+
+TEST(StockProfit, One_day_prices) {
     int priceValues[] = {1};
     vector<int> prices(priceValues, priceValues + 1);
     vector<vector<int>> expectTransactions;
@@ -24,8 +29,7 @@ TEST(StockProfit, One_day_prices)
     ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
 }
 
-TEST(StockProfit, Two_day_prices)
-{
+TEST(StockProfit, Two_day_prices) {
     int pricesLength = 2;
     int priceValues[] = {1, 2};
     vector<int> prices(priceValues, priceValues + pricesLength);
