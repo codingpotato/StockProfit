@@ -1,42 +1,44 @@
 Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 35972 .
-[==========] Running 16 tests from 1 test case.
+Note: Randomizing tests' orders with a seed of 20757 .
+[==========] Running 17 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 16 tests from StockProfit
+[----------] 17 tests from StockProfit
 [ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (1 ms)
-[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices (0 ms)
+[       OK ] StockProfit.Empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_two_day_prices
+[       OK ] StockProfit.Get_max_profits_for_two_day_prices (0 ms)
 [ RUN      ] StockProfit.Two_day_prices
-[       OK ] StockProfit.Two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
+[       OK ] StockProfit.Two_day_prices (1 ms)
 [ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_two_day_prices
 [       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_two_day_prices (0 ms)
 [ RUN      ] StockProfit.Get_max_profits_after_buy_for_four_day_prices
 [       OK ] StockProfit.Get_max_profits_after_buy_for_four_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_sell_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_after_sell_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.One_day_prices
-[       OK ] StockProfit.One_day_prices (0 ms)
 [ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices
 [       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices (0 ms)
 [ RUN      ] StockProfit.Get_max_profits_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
+[       OK ] StockProfit.Get_max_profits_for_one_day_prices (1 ms)
+[ RUN      ] StockProfit.One_day_prices
+[       OK ] StockProfit.One_day_prices (0 ms)
 [ RUN      ] StockProfit.Get_max_profits_after_sell_for_empty_prices
 [       OK ] StockProfit.Get_max_profits_after_sell_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_empty_prices (0 ms)
 [ RUN      ] StockProfit.Get_max_profits_after_sell_for_two_day_prices
 [       OK ] StockProfit.Get_max_profits_after_sell_for_two_day_prices (0 ms)
-[----------] 16 tests from StockProfit (5 ms total)
+[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_for_empty_prices (1 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_three_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_three_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_sell_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_after_sell_for_one_day_prices (0 ms)
+[----------] 17 tests from StockProfit (3 ms total)
 
 [----------] Global test environment tear-down
-[==========] 16 tests from 1 test case ran. (7 ms total)
-[  PASSED  ] 16 tests.
+[==========] 17 tests from 1 test case ran. (5 ms total)
+[  PASSED  ] 17 tests.
