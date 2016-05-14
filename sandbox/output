@@ -1,9 +1,8 @@
-Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 34494 .
-[==========] Running 13 tests from 1 test case.
-[----------] Global test environment set-up.
-[----------] 13 tests from StockProfit
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
-/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_vector.h:771:16: runtime error: reference binding to null pointer of type 'int'
-SUMMARY: AddressSanitizer: undefined-behavior /usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_vector.h:771 
-make: *** [test.output] Error 1
+StockProfit.cpp:39:22: error: too many arguments to function call, expected 0, have 1
+    if (prices_.size(0 == 0) return;
+        ~~~~~~~~~~~~ ^~~~~~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_vector.h:644:7: note: 'size' declared here
+      size_type
+      ^
+1 error generated.
+make: *** [test] Error 1
