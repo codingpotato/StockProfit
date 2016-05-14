@@ -8,5 +8,5 @@ TEST(StockProfit, Empty_prices)
     vector<int> prices;
     vector<vector<int>> expectTransactions;
     StockProfit stockProfit(prices);
-    ASSERT_EQ(expectTransactions, stockProfit.getTransactions);
+    ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
 }
