@@ -1,20 +1,8 @@
-StockProfit.tests.cpp:28:45: error: no member named 'getMaxProfits' in 'StockProfit'
-    ASSERT_EQ(expectMaxProfits, stockProfit.getMaxProfits());
-                                ~~~~~~~~~~~ ^
-/usr/include/gtest/gtest.h:1889:54: note: expanded from macro 'ASSERT_EQ'
-# define ASSERT_EQ(val1, val2) GTEST_ASSERT_EQ(val1, val2)
-                                                     ^
-/usr/include/gtest/gtest.h:1873:33: note: expanded from macro 'GTEST_ASSERT_EQ'
-                      expected, actual)
-                                ^
-/usr/include/gtest/gtest_pred_impl.h:166:40: note: expanded from macro 'ASSERT_PRED_FORMAT2'
-  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_FATAL_FAILURE_)
-                                       ^
-/usr/include/gtest/gtest_pred_impl.h:147:43: note: expanded from macro 'GTEST_PRED_FORMAT2_'
-  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\
-                                          ^
-/usr/include/gtest/gtest_pred_impl.h:77:52: note: expanded from macro 'GTEST_ASSERT_'
-  if (const ::testing::AssertionResult gtest_ar = (expression)) \
-                                                   ^
+StockProfit.cpp:14:26: error: redefinition of 'getMaxProfitsAfterBuy'
+vector<int> StockProfit::getMaxProfitsAfterBuy() {
+                         ^
+StockProfit.cpp:10:26: note: previous definition is here
+vector<int> StockProfit::getMaxProfitsAfterBuy() {
+                         ^
 1 error generated.
 make: *** [test] Error 1
