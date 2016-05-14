@@ -36,7 +36,7 @@ vector<vector<int>> StockProfit::getTransactions() {
 }
 
 void StockProfit::calculateProfits() {
-    if (prices_.size(0 == 0) return;
+    if (prices_.size() == 0) return;
     if (prices_.size() > 1) {
         maxProfits_[0] = 0;
         maxProfits_[1] = max(maxProfits_[0], prices_[1] - prices_[0]);
