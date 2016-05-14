@@ -1,38 +1,40 @@
 Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 88204 .
-[==========] Running 14 tests from 1 test case.
+Note: Randomizing tests' orders with a seed of 70552 .
+[==========] Running 15 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 14 tests from StockProfit
-[ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_for_empty_prices (0 ms)
+[----------] 15 tests from StockProfit
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_empty_prices (1 ms)
 [ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_two_day_prices
 [       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.One_day_prices
-[       OK ] StockProfit.One_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
 [ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices
 [       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Two_day_prices
-[       OK ] StockProfit.Two_day_prices (0 ms)
+[ RUN      ] StockProfit.One_day_prices
+[       OK ] StockProfit.One_day_prices (0 ms)
 [ RUN      ] StockProfit.Get_max_profits_for_two_day_prices
 [       OK ] StockProfit.Get_max_profits_for_two_day_prices (0 ms)
 [ RUN      ] StockProfit.Get_max_profits_after_sell_for_empty_prices
 [       OK ] StockProfit.Get_max_profits_after_sell_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
 [ RUN      ] StockProfit.Get_max_profits_after_buy_for_four_day_prices
 [       OK ] StockProfit.Get_max_profits_after_buy_for_four_day_prices (0 ms)
-[----------] 14 tests from StockProfit (3 ms total)
+[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Two_day_prices
+[       OK ] StockProfit.Two_day_prices (0 ms)
+[ RUN      ] StockProfit.Empty_prices
+[       OK ] StockProfit.Empty_prices (1 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_for_one_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_sell_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_after_sell_for_one_day_prices (0 ms)
+[----------] 15 tests from StockProfit (4 ms total)
 
 [----------] Global test environment tear-down
-[==========] 14 tests from 1 test case ran. (4 ms total)
-[  PASSED  ] 14 tests.
+[==========] 15 tests from 1 test case ran. (6 ms total)
+[  PASSED  ] 15 tests.
