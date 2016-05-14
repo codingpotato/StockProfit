@@ -1,21 +1,21 @@
 Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 84618 .
+Note: Randomizing tests' orders with a seed of 89900 .
 [==========] Running 2 tests from 1 test case.
 [----------] Global test environment set-up.
 [----------] 2 tests from StockProfit
 [ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (2 ms)
+[       OK ] StockProfit.Empty_prices (1 ms)
 [ RUN      ] StockProfit.One_day_prices
-StockProfit.tests.cpp:20: Failure
+StockProfit.tests.cpp:24: Failure
 Value of: stockProfit.getTransactions()
   Actual: { { 0 } }
 Expected: expectTransactions
 Which is: { {} }
-[  FAILED  ] StockProfit.One_day_prices (2 ms)
-[----------] 2 tests from StockProfit (5 ms total)
+[  FAILED  ] StockProfit.One_day_prices (1 ms)
+[----------] 2 tests from StockProfit (3 ms total)
 
 [----------] Global test environment tear-down
-[==========] 2 tests from 1 test case ran. (6 ms total)
+[==========] 2 tests from 1 test case ran. (5 ms total)
 [  PASSED  ] 1 test.
 [  FAILED  ] 1 test, listed below:
 [  FAILED  ] StockProfit.One_day_prices
