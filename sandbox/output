@@ -1,6 +1,6 @@
-StockProfit.tests.cpp:11:47: error: no member named 'getTransactions' in 'StockProfit'
+StockProfit.tests.cpp:11:47: error: reference to non-static member function must be called; did you mean to call it with no arguments?
     ASSERT_EQ(expectTransactions, stockProfit.getTransactions);
-                                  ~~~~~~~~~~~ ^
+                                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~
 /usr/include/gtest/gtest.h:1889:54: note: expanded from macro 'ASSERT_EQ'
 # define ASSERT_EQ(val1, val2) GTEST_ASSERT_EQ(val1, val2)
                                                      ^
