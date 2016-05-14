@@ -46,6 +46,7 @@ void StockProfit::calculateProfits() {
             profit += maxProfits_[i - 2];
         }
         maxProfitsAfterBuy_[i] = profit;
-        maxProfitsWithStockInHand_[i] = profit;
+        maxProfitsWithStockInHand_[i] = max(profit, 
+            i > 1 ? maxProfitsAfterBuy_[i - 1] : 0)
     }
 }
