@@ -1,8 +1,64 @@
-StockProfit.cpp:51:47: error: comparison of unsigned expression >= 0 is always true [-Werror,-Wtautological-compare]
-        for (unsigned int buy = sell - 1; buy >= 0; --buy) {
-                                          ~~~ ^  ~
-StockProfit.cpp:55:41: error: comparison of integers of different signs: 'int' and 'unsigned int' [-Werror,-Wsign-compare]
-                for (int i = buy + 1; i < sell; ++i) {
-                                      ~ ^ ~~~~
-2 errors generated.
-make: *** [test] Error 1
+Running main() from gtest_main.cc
+Note: Randomizing tests' orders with a seed of 6621 .
+[==========] Running 27 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 27 tests from StockProfit
+[ RUN      ] StockProfit.Get_max_profits_for_four_day_prices
+[       OK ] StockProfit.Get_max_profits_for_four_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_sell
+[       OK ] StockProfit.Get_max_profits_after_sell (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_two_day_prices
+[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_two_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits
+[       OK ] StockProfit.Get_max_profits (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_four_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_four_day_prices (0 ms)
+[ RUN      ] StockProfit.Three_day_prices
+[       OK ] StockProfit.Three_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_two_day_descending_prices
+[       OK ] StockProfit.Get_max_profits_for_two_day_descending_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_three_day_prices
+[       OK ] StockProfit.Get_max_profits_for_three_day_prices (0 ms)
+[ RUN      ] StockProfit.Two_day_prices
+[       OK ] StockProfit.Two_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_for_one_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_sell_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_after_sell_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Empty_prices
+[       OK ] StockProfit.Empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_three_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_three_day_prices (1 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_transactions
+[       OK ] StockProfit.Get_transactions (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_sell_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_after_sell_for_one_day_prices (0 ms)
+[ RUN      ] StockProfit.One_day_prices
+[       OK ] StockProfit.One_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy
+[       OK ] StockProfit.Get_max_profits_after_buy (1 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_sell_for_three_day_prices
+[       OK ] StockProfit.Get_max_profits_after_sell_for_three_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_three_day_prices
+[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_three_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_two_day_prices
+[       OK ] StockProfit.Get_max_profits_for_two_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_sell_for_two_day_prices
+[       OK ] StockProfit.Get_max_profits_after_sell_for_two_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
+[----------] 27 tests from StockProfit (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 27 tests from 1 test case ran. (7 ms total)
+[  PASSED  ] 27 tests.
