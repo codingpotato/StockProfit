@@ -279,6 +279,19 @@ TEST(StockProfit, Get_max_profits_for_four_day_prices) {
     ASSERT_EQ(expectMaxProfits, stockProfit.getMaxProfits());
 }
 
+TEST(StockProfit, Get_transactions) {
+    int pricesValue[] = {1, 2, 3, 1, 3};
+    int pricesLength = sizeof(pricesValue) / sizeof(int);
+    vector<int> prices(pricesValue, pricesValue + pricesLength);
+    vector<vector<int>> expectTransactions;
+    int transactionValues[] = {BUY, SELL, COOLDOWN, BUY, SELL};
+    expectTransactions.push_back(
+        vector<int>(transactionValues, transactionValues + pricesLength));
+    
+    StockProfit stockProfit(prices);
+    ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
+}
+
 TEST(StockProfit, Get_max_profits_after_buy) {
     int pricesValue[] = {1, 2, 3, 1, 3};
     int pricesLength = sizeof(pricesValue) / sizeof(int);
