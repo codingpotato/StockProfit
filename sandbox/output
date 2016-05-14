@@ -1,44 +1,11 @@
 Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 11560 .
+Note: Randomizing tests' orders with a seed of 77380 .
 [==========] Running 12 tests from 1 test case.
 [----------] Global test environment set-up.
 [----------] 12 tests from StockProfit
-[ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices
-StockProfit.tests.cpp:77: Failure
-Value of: stockProfit.getMaxProfitsWithStockInHand()
-  Actual: {}
-Expected: expectMaxProfitsWithStockInHand
-Which is: { -1 }
-[  FAILED  ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices (2 ms)
-[ RUN      ] StockProfit.One_day_prices
-[       OK ] StockProfit.One_day_prices (0 ms)
 [ RUN      ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Two_day_prices
-[       OK ] StockProfit.Two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_four_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_four_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
-[       OK ] StockProfit.Get_max_profits_for_empty_prices (0 ms)
+[       OK ] StockProfit.Get_max_profits_with_stock_in_hand_for_empty_prices (1 ms)
 [ RUN      ] StockProfit.Get_max_profits_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
-[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
-[----------] 12 tests from StockProfit (4 ms total)
-
-[----------] Global test environment tear-down
-[==========] 12 tests from 1 test case ran. (5 ms total)
-[  PASSED  ] 11 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] StockProfit.Get_max_profits_with_stock_in_hand_for_one_day_prices
-
- 1 FAILED TEST
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_vector.h:771:16: runtime error: reference binding to null pointer of type 'int'
+SUMMARY: AddressSanitizer: undefined-behavior /usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_vector.h:771 
 make: *** [test.output] Error 1
