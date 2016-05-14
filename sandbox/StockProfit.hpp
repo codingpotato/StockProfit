@@ -24,6 +24,7 @@ public:
 
 private:
     void calculateProfits();
+    void generateTransactionsByFindBuySellPair();
 
     vector<int> prices_;
     vector<int> maxProfitsAfterBuy_;
