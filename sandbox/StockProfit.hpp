@@ -5,4 +5,7 @@
 
 using namespace std;
 
+class StockProfit {
+};
+
 #endif
