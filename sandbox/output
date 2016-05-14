@@ -1,18 +1,30 @@
 Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 71969 .
-[==========] Running 4 tests from 1 test case.
+Note: Randomizing tests' orders with a seed of 99077 .
+[==========] Running 5 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 4 tests from StockProfit
+[----------] 5 tests from StockProfit
+[ RUN      ] StockProfit.Empty_prices
+[       OK ] StockProfit.Empty_prices (2 ms)
 [ RUN      ] StockProfit.Get_max_profit_after_buy_for_empty_prices
 [       OK ] StockProfit.Get_max_profit_after_buy_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (0 ms)
-[ RUN      ] StockProfit.Two_day_prices
-[       OK ] StockProfit.Two_day_prices (0 ms)
 [ RUN      ] StockProfit.One_day_prices
 [       OK ] StockProfit.One_day_prices (0 ms)
-[----------] 4 tests from StockProfit (1 ms total)
+[ RUN      ] StockProfit.Get_max_profit_after_buy_for_one_day_prices
+StockProfit.tests.cpp:44: Failure
+Value of: stockProfit.getMaxProfitsAfterBuy()
+  Actual: {}
+Expected: expectMaxProfitsAfterBuy
+Which is: { -1 }
+[  FAILED  ] StockProfit.Get_max_profit_after_buy_for_one_day_prices (1 ms)
+[ RUN      ] StockProfit.Two_day_prices
+[       OK ] StockProfit.Two_day_prices (0 ms)
+[----------] 5 tests from StockProfit (3 ms total)
 
 [----------] Global test environment tear-down
-[==========] 4 tests from 1 test case ran. (2 ms total)
+[==========] 5 tests from 1 test case ran. (4 ms total)
 [  PASSED  ] 4 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] StockProfit.Get_max_profit_after_buy_for_one_day_prices
+
+ 1 FAILED TEST
+make: *** [test.output] Error 1
