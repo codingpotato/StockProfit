@@ -1,8 +1,26 @@
-StockProfit.cpp:14:26: error: redefinition of 'getMaxProfitsAfterBuy'
-vector<int> StockProfit::getMaxProfitsAfterBuy() {
-                         ^
-StockProfit.cpp:10:26: note: previous definition is here
-vector<int> StockProfit::getMaxProfitsAfterBuy() {
-                         ^
-1 error generated.
-make: *** [test] Error 1
+Running main() from gtest_main.cc
+Note: Randomizing tests' orders with a seed of 55593 .
+[==========] Running 8 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 8 tests from StockProfit
+[ RUN      ] StockProfit.One_day_prices
+[       OK ] StockProfit.One_day_prices (1 ms)
+[ RUN      ] StockProfit.Empty_prices
+[       OK ] StockProfit.Empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profit_after_buy_for_one_day_prices
+[       OK ] StockProfit.Get_max_profit_after_buy_for_one_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profit_after_buy_for_four_day_prices
+[       OK ] StockProfit.Get_max_profit_after_buy_for_four_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profit_after_buy_for_empty_prices
+[       OK ] StockProfit.Get_max_profit_after_buy_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Two_day_prices
+[       OK ] StockProfit.Two_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profit_after_buy_for_two_day_prices
+[       OK ] StockProfit.Get_max_profit_after_buy_for_two_day_prices (0 ms)
+[----------] 8 tests from StockProfit (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test case ran. (3 ms total)
+[  PASSED  ] 8 tests.

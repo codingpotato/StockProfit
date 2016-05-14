@@ -11,7 +11,7 @@ vector<int> StockProfit::getMaxProfitsAfterBuy() {
     return maxProfitsAfterBuy_;
 }
 
-vector<int> StockProfit::getMaxProfitsAfterBuy() {
+vector<int> StockProfit::getMaxProfits() {
     return maxProfits_;
 }
 
