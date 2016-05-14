@@ -1,16 +1,28 @@
-StockProfit.tests.cpp:46:31: error: use of undeclared identifier 'priceValues'; did you mean 'pricesValue'?
-    int pricesLength = sizeof(priceValues) / sizeof(int);
-                              ^~~~~~~~~~~
-                              pricesValue
-StockProfit.tests.cpp:45:9: note: 'pricesValue' declared here
-    int pricesValue[] = {1};
-        ^
-StockProfit.tests.cpp:59:31: error: use of undeclared identifier 'priceValues'; did you mean 'pricesValue'?
-    int pricesLength = sizeof(priceValues) / sizeof(int);
-                              ^~~~~~~~~~~
-                              pricesValue
-StockProfit.tests.cpp:58:9: note: 'pricesValue' declared here
-    int pricesValue[] = {1};
-        ^
-2 errors generated.
-make: *** [test] Error 1
+Running main() from gtest_main.cc
+Note: Randomizing tests' orders with a seed of 49548 .
+[==========] Running 9 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 9 tests from StockProfit
+[ RUN      ] StockProfit.One_day_prices
+[       OK ] StockProfit.One_day_prices (1 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_for_one_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Two_day_prices
+[       OK ] StockProfit.Two_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_two_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_two_day_prices (0 ms)
+[ RUN      ] StockProfit.Empty_prices
+[       OK ] StockProfit.Empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_one_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_one_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_for_empty_prices
+[       OK ] StockProfit.Get_max_profits_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profits_after_buy_for_four_day_prices
+[       OK ] StockProfit.Get_max_profits_after_buy_for_four_day_prices (0 ms)
+[----------] 9 tests from StockProfit (3 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test case ran. (4 ms total)
+[  PASSED  ] 9 tests.

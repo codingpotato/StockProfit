@@ -43,7 +43,7 @@ TEST(StockProfit, One_day_prices) {
 
 TEST(StockProfit, Get_max_profits_after_buy_for_one_day_prices) {
     int pricesValue[] = {1};
-    int pricesLength = sizeof(priceValues) / sizeof(int);
+    int pricesLength = sizeof(pricesValue) / sizeof(int);
     vector<int> prices(pricesValue, pricesValue + pricesLength);
     int maxProfitsAfterBuyValues[] = {-1};
     vector<int> expectMaxProfitsAfterBuy(maxProfitsAfterBuyValues,
@@ -56,7 +56,7 @@ TEST(StockProfit, Get_max_profits_after_buy_for_one_day_prices) {
 
 TEST(StockProfit, Get_max_profits_for_one_day_prices) {
     int pricesValue[] = {1};
-    int pricesLength = sizeof(priceValues) / sizeof(int);
+    int pricesLength = sizeof(pricesValue) / sizeof(int);
     vector<int> prices(pricesValue, pricesValue + pricesLength);
     int maxProfitsValue[] = {0};
     vector<int> expectMaxProfits(maxProfitsValue,
