@@ -3,6 +3,7 @@
 StockProfit::StockProfit(vector<int> prices)
     : prices_(prices),
       maxProfitsAfterBuy_(prices.size()),
+      maxProfitsWithStockInHand_(prices.size()),
       maxProfits_(prices.size()) {
     calculateProfits();
 }
