@@ -46,12 +46,12 @@ vector<vector<int>> StockProfit::getTransactions() {
     if (prices_.size() == 1) {
         vector<int> transaction;
         transaction.push_back(PASS);
-        transactions.push_back(transaction);
+        transactions_.push_back(transaction);
     } else if (prices_.size() == 2) {
         vector<int> transaction;
         transaction.push_back(BUY);
         transaction.push_back(SELL);
-        transactions.push_back(transaction);
+        transactions_.push_back(transaction);
     }
-    return transactions;
+    return transactions_;
 }
