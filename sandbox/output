@@ -1,12 +1,5 @@
-StockProfit.cpp:9:25: error: use of undeclared identifier 'princes_'; did you mean 'prices_'?
-    for (int i = 0; i < princes_.size(); ++i) {
-                        ^~~~~~~~
-                        prices_
-./StockProfit.hpp:23:17: note: 'prices_' declared here
-    vector<int> prices_;
-                ^
 StockProfit.cpp:9:23: error: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Werror,-Wsign-compare]
-    for (int i = 0; i < princes_.size(); ++i) {
-                    ~ ^ ~~~~~~~~~~~~~~~
-2 errors generated.
+    for (int i = 0; i < prices_.size(); ++i) {
+                    ~ ^ ~~~~~~~~~~~~~~
+1 error generated.
 make: *** [test] Error 1
