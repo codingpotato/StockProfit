@@ -6,6 +6,10 @@
 using namespace std;
 
 class StockProfit {
+
+public:
+    StockProfit(vector<int> prices);
+
 };
 
 #endif
