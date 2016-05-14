@@ -1,8 +1,5 @@
-StockProfit.cpp:45:19: error: out-of-line definition of 'generateTransactionsByFindBuySellPair' does not match any declaration in 'StockProfit'
-void StockProfit::generateTransactionsByFindBuySellPair(
-                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 StockProfit.cpp:50:22: error: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Werror,-Wsign-compare]
         if (sell + 1 < prices_.size()) transaction[sell + 1] = COOLDOWN;
             ~~~~~~~~ ^ ~~~~~~~~~~~~~~
-2 errors generated.
+1 error generated.
 make: *** [test] Error 1
