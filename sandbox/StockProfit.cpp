@@ -6,8 +6,15 @@ StockProfit::StockProfit(vector<int> prices)
 
 vector<int> StockProfit::getMaxProfitsAfterBuy() {
     vector<int> maxProfitsAfterBuy;
+    int maxProfits[2];
+    int maxProfits[0] = prices_[0];
+    int maxProfits[1] = prices_[1] - prices_[0];
     for (unsigned int i = 0; i < prices_.size(); ++i) {
-        maxProfitsAfterBuy.push_back(-prices_[i]);
+        int profit = -prices_[i];
+        if (i > 1) {
+            profit += maxProfits[i - 2];
+        }
+        maxProfitsAfterBuy.push_back(profit);
     }
     return maxProfitsAfterBuy;
 }

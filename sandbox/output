@@ -1,34 +1,14 @@
-Running main() from gtest_main.cc
-Note: Randomizing tests' orders with a seed of 73751 .
-[==========] Running 7 tests from 1 test case.
-[----------] Global test environment set-up.
-[----------] 7 tests from StockProfit
-[ RUN      ] StockProfit.Get_max_profit_after_buy_for_four_day_prices
-StockProfit.tests.cpp:83: Failure
-Value of: stockProfit.getMaxProfitsAfterBuy()
-  Actual: { -1, -2, -3, -4 }
-Expected: expectMaxProfitsAfterBuy
-Which is: { -1, -2, -3, -3 }
-[  FAILED  ] StockProfit.Get_max_profit_after_buy_for_four_day_prices (7 ms)
-[ RUN      ] StockProfit.One_day_prices
-[       OK ] StockProfit.One_day_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profit_after_buy_for_empty_prices
-[       OK ] StockProfit.Get_max_profit_after_buy_for_empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profit_after_buy_for_two_day_prices
-[       OK ] StockProfit.Get_max_profit_after_buy_for_two_day_prices (0 ms)
-[ RUN      ] StockProfit.Empty_prices
-[       OK ] StockProfit.Empty_prices (0 ms)
-[ RUN      ] StockProfit.Get_max_profit_after_buy_for_one_day_prices
-[       OK ] StockProfit.Get_max_profit_after_buy_for_one_day_prices (0 ms)
-[ RUN      ] StockProfit.Two_day_prices
-[       OK ] StockProfit.Two_day_prices (0 ms)
-[----------] 7 tests from StockProfit (9 ms total)
-
-[----------] Global test environment tear-down
-[==========] 7 tests from 1 test case ran. (9 ms total)
-[  PASSED  ] 6 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] StockProfit.Get_max_profit_after_buy_for_four_day_prices
-
- 1 FAILED TEST
-make: *** [test.output] Error 1
+StockProfit.cpp:10:9: error: redefinition of 'maxProfits' with a different type: 'int [0]' vs 'int [2]'
+    int maxProfits[0] = prices_[0];
+        ^
+StockProfit.cpp:9:9: note: previous definition is here
+    int maxProfits[2];
+        ^
+StockProfit.cpp:11:9: error: redefinition of 'maxProfits' with a different type: 'int [1]' vs 'int [2]'
+    int maxProfits[1] = prices_[1] - prices_[0];
+        ^
+StockProfit.cpp:9:9: note: previous definition is here
+    int maxProfits[2];
+        ^
+2 errors generated.
+make: *** [test] Error 1
