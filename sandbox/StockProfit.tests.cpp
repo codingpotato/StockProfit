@@ -20,6 +20,14 @@ TEST(StockProfit, Get_max_profit_after_buy_for_empty_prices) {
         stockProfit.getMaxProfitsAfterBuy());
 }
 
+TEST(StockProfit, Get_max_profits_for_empty_prices) {
+    vector<int> prices;
+    vector<int> expectMaxProfits;
+
+    StockProfit stockProfit(prices);
+    ASSERT_EQ(expectMaxProfits, stockProfit.getMaxProfits());
+}
+
 TEST(StockProfit, One_day_prices) {
     int priceValues[] = {1};
     int pricesLength = sizeof(priceValues) / sizeof(int);
