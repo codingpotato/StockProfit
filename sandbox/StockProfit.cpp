@@ -52,7 +52,9 @@ void StockProfit::generateTransactionsByFindBuySellPair() {
 }
 
 vector<vector<int>> StockProfit::getTransactions() {
-    if (prices_.size() == 1) {
+    if (prices_.size() == 0) {
+        return transactions_;
+    } else if (prices_.size() == 1) {
         vector<int> transaction;
         transaction.push_back(PASS);
         transactions_.push_back(transaction);
