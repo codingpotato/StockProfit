@@ -69,3 +69,16 @@ TEST(StockProfit, Get_max_profit_after_buy_for_two_day_prices) {
     ASSERT_EQ(expectMaxProfitsAfterBuy,
         stockProfit.getMaxProfitsAfterBuy());
 }
+
+TEST(StockProfit, Get_max_profit_after_buy_for_four_day_prices) {
+    int priceValues[] = {1, 2, 3, 4};
+    int pricesLength = sizeof(priceValues) / sizeof(int);
+    vector<int> prices(priceValues, priceValues + pricesLength);
+    int maxProfitsAfterBuyValues[] = {-1, -2, -3, -3};
+    vector<int> expectMaxProfitsAfterBuy(
+        maxProfitsAfterBuyValues, maxProfitsAfterBuyValues + pricesLength);
+
+    StockProfit stockProfit(prices);
+    ASSERT_EQ(expectMaxProfitsAfterBuy,
+        stockProfit.getMaxProfitsAfterBuy());
+}
