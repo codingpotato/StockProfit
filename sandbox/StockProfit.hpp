@@ -23,8 +23,8 @@ private:
     void calculateProfits();
 
     vector<int> prices_;
-    vector<int> maxProfitsAfterBuy;
-    vector<int> maxProfits;
+    vector<int> maxProfitsAfterBuy_;
+    vector<int> maxProfits_;
 
 };
 
