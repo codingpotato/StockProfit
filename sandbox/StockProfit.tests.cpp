@@ -329,3 +329,16 @@ TEST(StockProfit, Get_max_profits) {
     StockProfit stockProfit(prices);
     ASSERT_EQ(expectMaxProfits, stockProfit.getMaxProfits());
 }
+
+TEST(StockProfit, Get_transactions_not_last_sell) {
+    int pricesValue[] = {1, 2, 3, 1};
+    int pricesLength = sizeof(pricesValue) / sizeof(int);
+    vector<int> prices(pricesValue, pricesValue + pricesLength);
+    vector<vector<int>> expectTransactions;
+    int transactionValues[] = {BUY, PASS, SELL, COOLDOWN};
+    expectTransactions.push_back(
+        vector<int>(transactionValues, transactionValues + pricesLength));
+    
+    StockProfit stockProfit(prices);
+    ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
+}
