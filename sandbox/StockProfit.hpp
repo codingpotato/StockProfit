@@ -20,7 +20,11 @@ public:
     vector<vector<int>> getTransactions();
 
 private:
+    void calculateProfits();
+
     vector<int> prices_;
+    vector<int> maxProfitsAfterBuy;
+    vector<int> maxProfits;
 
 };
 

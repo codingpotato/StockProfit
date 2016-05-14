@@ -1,23 +1,13 @@
 #include "StockProfit.hpp"
 
 StockProfit::StockProfit(vector<int> prices)
-    : prices_(prices) {
+    : prices_(prices),
+      maxProfitsAfterBuy(prices.size(), 0),
+      maxProfits(prices.size(), 0) {
+    calculateProfits();
 }
 
 vector<int> StockProfit::getMaxProfitsAfterBuy() {
-    vector<int> maxProfitsAfterBuy;
-    int maxProfits[2];
-    if (prices_.size() > 1) {
-        maxProfits[0] = 0;
-        maxProfits[1] = prices_[1] - prices_[0];
-    }
-    for (unsigned int i = 0; i < prices_.size(); ++i) {
-        int profit = -prices_[i];
-        if (i > 1) {
-            profit += maxProfits[i - 2];
-        }
-        maxProfitsAfterBuy.push_back(profit);
-    }
     return maxProfitsAfterBuy;
 }
 
@@ -34,4 +24,20 @@ vector<vector<int>> StockProfit::getTransactions() {
         transactions.push_back(transaction);
     }
     return transactions;
+}
+
+void StockProfit::calculateProfits() {
+    vector<int> maxProfitsAfterBuy;
+    int maxProfits[2];
+    if (prices_.size() > 1) {
+        maxProfits[0] = 0;
+        maxProfits[1] = prices_[1] - prices_[0];
+    }
+    for (unsigned int i = 0; i < prices_.size(); ++i) {
+        int profit = -prices_[i];
+        if (i > 1) {
+            profit += maxProfits[i - 2];
+        }
+        maxProfitsAfterBuy[i] = profit;
+    }
 }
