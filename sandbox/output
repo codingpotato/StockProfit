@@ -1,9 +1,20 @@
-StockProfit.cpp:10:39: error: use of undeclared identifier 'prices'; did you mean 'prices_'?
-        maxProfitsAfterBuy.push_back(-prices[0]);
-                                      ^~~~~~
-                                      prices_
-./StockProfit.hpp:23:17: note: 'prices_' declared here
-    vector<int> prices_;
-                ^
-1 error generated.
-make: *** [test] Error 1
+Running main() from gtest_main.cc
+Note: Randomizing tests' orders with a seed of 10678 .
+[==========] Running 5 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 5 tests from StockProfit
+[ RUN      ] StockProfit.Get_max_profit_after_buy_for_empty_prices
+[       OK ] StockProfit.Get_max_profit_after_buy_for_empty_prices (0 ms)
+[ RUN      ] StockProfit.One_day_prices
+[       OK ] StockProfit.One_day_prices (0 ms)
+[ RUN      ] StockProfit.Get_max_profit_after_buy_for_one_day_prices
+[       OK ] StockProfit.Get_max_profit_after_buy_for_one_day_prices (0 ms)
+[ RUN      ] StockProfit.Empty_prices
+[       OK ] StockProfit.Empty_prices (0 ms)
+[ RUN      ] StockProfit.Two_day_prices
+[       OK ] StockProfit.Two_day_prices (0 ms)
+[----------] 5 tests from StockProfit (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test case ran. (2 ms total)
+[  PASSED  ] 5 tests.

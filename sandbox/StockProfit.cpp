@@ -7,7 +7,7 @@ StockProfit::StockProfit(vector<int> prices)
 vector<int> StockProfit::getMaxProfitsAfterBuy() {
     vector<int> maxProfitsAfterBuy;
     if (prices_.size() == 1) {
-        maxProfitsAfterBuy.push_back(-prices[0]);
+        maxProfitsAfterBuy.push_back(-prices_[0]);
     }
     return maxProfitsAfterBuy;
 }
