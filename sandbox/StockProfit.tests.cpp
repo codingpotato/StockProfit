@@ -23,3 +23,17 @@ TEST(StockProfit, One_day_prices)
     StockProfit stockProfit(prices);
     ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
 }
+
+TEST(StockProfit, Two_day_prices)
+{
+    int pricesLength = 2;
+    int priceValues[] = {1, 2};
+    vector<int> prices(priceValues, priceValues + pricesLength);
+    vector<vector<int>> expectTransactions;
+    int transactionValues[] = {BUY, SELL};
+    expectTransactions.push_back(
+        vector<int>(transactionValues, transactionValues + pricesLength));
+    
+    StockProfit stockProfit(prices);
+    ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
+}
