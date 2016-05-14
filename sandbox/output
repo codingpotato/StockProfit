@@ -1,5 +1,8 @@
-StockProfit.cpp:50:22: error: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Werror,-Wsign-compare]
-        if (sell + 1 < prices_.size()) transaction[sell + 1] = COOLDOWN;
-            ~~~~~~~~ ^ ~~~~~~~~~~~~~~
-1 error generated.
+StockProfit.cpp:51:47: error: comparison of unsigned expression >= 0 is always true [-Werror,-Wtautological-compare]
+        for (unsigned int buy = sell - 1; buy >= 0; --buy) {
+                                          ~~~ ^  ~
+StockProfit.cpp:55:41: error: comparison of integers of different signs: 'int' and 'unsigned int' [-Werror,-Wsign-compare]
+                for (int i = buy + 1; i < sell; ++i) {
+                                      ~ ^ ~~~~
+2 errors generated.
 make: *** [test] Error 1
