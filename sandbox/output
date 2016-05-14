@@ -4,8 +4,5 @@ StockProfit.cpp:49:5: error: use of undeclared identifier 'transactions'
 StockProfit.cpp:50:5: error: use of undeclared identifier 'transactions'
     transactions[sell] = SELL;
     ^
-StockProfit.cpp:51:5: error: use of undeclared identifier 'transactions'
-    transactions.push_back(transaction);
-    ^
-3 errors generated.
+2 errors generated.
 make: *** [test] Error 1
