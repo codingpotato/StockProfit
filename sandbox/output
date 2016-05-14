@@ -1,8 +1,5 @@
-StockProfit.hpp:3:1: error: treating Unicode character as whitespace [-Werror,-Wunicode-whitespace]
- 
-^
 StockProfit.hpp:7:1: error: treating Unicode character as whitespace [-Werror,-Wunicode-whitespace]
  
 ^
-2 errors generated.
+1 error generated.
 make: *** [StockProfit.compiled_hpp] Error 1
