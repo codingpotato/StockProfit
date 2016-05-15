@@ -48,9 +48,9 @@ void StockProfit::generateTransactionsByFindBuySellPair(
         for (int sell = endOfDay; sell >= 1; --sell) {
             if (maxProfits_[sell] == maxProfitsAfterSell_[sell]) {
                 transaction[sell] = SELL;
-                if (sell + 1 < prices_.size()) {
+                if (sell + 1 < (int)prices_.size()) {
                     transaction[sell + 1] = COOLDOWN;
-                    for (unsigned int i = sell + 2; i <= endOfDay; ++i) {
+                    for (int i = sell + 2; i <= endOfDay; ++i) {
                         transaction[i] = PASS;
                     }
                 }

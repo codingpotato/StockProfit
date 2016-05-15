@@ -1,11 +1,5 @@
-StockProfit.cpp:51:30: error: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Werror,-Wsign-compare]
-                if (sell + 1 < prices_.size()) {
-                    ~~~~~~~~ ^ ~~~~~~~~~~~~~~
-StockProfit.cpp:53:55: error: comparison of integers of different signs: 'unsigned int' and 'int' [-Werror,-Wsign-compare]
-                    for (unsigned int i = sell + 2; i <= endOfDay; ++i) {
-                                                    ~ ^  ~~~~~~~~
 StockProfit.cpp:61:58: error: comparison of integers of different signs: 'unsigned int' and 'int' [-Werror,-Wsign-compare]
                         for (unsigned int i = buy + 1; i < sell; ++i) {
                                                        ~ ^ ~~~~
-3 errors generated.
+1 error generated.
 make: *** [test] Error 1
