@@ -58,7 +58,7 @@ void StockProfit::generateTransactionsByFindBuySellPair(
                     if (maxProfitsAfterBuy_[buy] + prices_[sell] == 
                         maxProfits_[sell]) {
                         transaction[buy] = BUY;
-                        for (unsigned int i = buy + 1; i < sell; ++i) {
+                        for (int i = buy + 1; i < sell; ++i) {
                             transaction[i] = PASS;
                         }
                         generateTransactionsByFindBuySellPair(
