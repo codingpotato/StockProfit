@@ -1,6 +1,7 @@
 #ifndef STOCK_PROFIT_INCLUDED
 #define STOCK_PROFIT_INCLUDED
 
+#include <set>
 #include <vector>
 
 using namespace std;
@@ -20,7 +21,7 @@ public:
     vector<int> getMaxProfitsWithStockInHand();
     vector<int> getMaxProfitsAfterSell();
     vector<int> getMaxProfits();
-    vector<vector<int>> getTransactions();
+    set<vector<int>> getTransactions();
 
 private:
     void calculateProfits();
@@ -34,7 +35,7 @@ private:
     vector<int> maxProfitsAfterSell_;
     vector<int> maxProfits_;
 
-    vector<vector<int>> transactions_;
+    set<vector<int>> transactions_;
 
     static const int COOLDOWN_DISTANCE = 2;
 

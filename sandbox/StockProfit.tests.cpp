@@ -5,7 +5,7 @@ using namespace ::testing;
 
 TEST(StockProfit, Empty_prices) {
     vector<int> prices;
-    vector<vector<int>> expectTransactions;
+    set<vector<int>> expectTransactions;
 
     StockProfit stockProfit(prices);
     ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
@@ -50,9 +50,9 @@ TEST(StockProfit, One_day_prices) {
     int pricesValue[] = {1};
     int pricesLength = sizeof(pricesValue) / sizeof(int);
     vector<int> prices(pricesValue, pricesValue + pricesLength);
-    vector<vector<int>> expectTransactions;
+    set<vector<int>> expectTransactions;
     int transactionValues[] = {PASS};
-    expectTransactions.push_back(
+    expectTransactions.insert(
         vector<int>(transactionValues, transactionValues + pricesLength));
     
     StockProfit stockProfit(prices);
@@ -115,9 +115,9 @@ TEST(StockProfit, Two_day_prices) {
     int pricesValue[] = {1, 2};
     int pricesLength = sizeof(pricesValue) / sizeof(int);
     vector<int> prices(pricesValue, pricesValue + pricesLength);
-    vector<vector<int>> expectTransactions;
+    set<vector<int>> expectTransactions;
     int transactionValues[] = {BUY, SELL};
-    expectTransactions.push_back(
+    expectTransactions.insert(
         vector<int>(transactionValues, transactionValues + pricesLength));
     
     StockProfit stockProfit(prices);
@@ -192,9 +192,9 @@ TEST(StockProfit, Three_day_prices) {
     int pricesValue[] = {1, 2, 3};
     int pricesLength = sizeof(pricesValue) / sizeof(int);
     vector<int> prices(pricesValue, pricesValue + pricesLength);
-    vector<vector<int>> expectTransactions;
+    set<vector<int>> expectTransactions;
     int transactionValues[] = {BUY, PASS, SELL};
-    expectTransactions.push_back(
+    expectTransactions.insert(
         vector<int>(transactionValues, transactionValues + pricesLength));
     
     StockProfit stockProfit(prices);
@@ -283,9 +283,9 @@ TEST(StockProfit, Get_transactions) {
     int pricesValue[] = {1, 2, 3, 1, 3};
     int pricesLength = sizeof(pricesValue) / sizeof(int);
     vector<int> prices(pricesValue, pricesValue + pricesLength);
-    vector<vector<int>> expectTransactions;
+    set<vector<int>> expectTransactions;
     int transactionValues[] = {BUY, SELL, COOLDOWN, BUY, SELL};
-    expectTransactions.push_back(
+    expectTransactions.insert(
         vector<int>(transactionValues, transactionValues + pricesLength));
     
     StockProfit stockProfit(prices);
@@ -334,9 +334,9 @@ TEST(StockProfit, Get_transactions_not_last_sell) {
     int pricesValue[] = {1, 2, 3, 1};
     int pricesLength = sizeof(pricesValue) / sizeof(int);
     vector<int> prices(pricesValue, pricesValue + pricesLength);
-    vector<vector<int>> expectTransactions;
+    set<vector<int>> expectTransactions;
     int transactionValues[] = {BUY, PASS, SELL, COOLDOWN};
-    expectTransactions.push_back(
+    expectTransactions.insert(
         vector<int>(transactionValues, transactionValues + pricesLength));
     
     StockProfit stockProfit(prices);
@@ -347,12 +347,12 @@ TEST(StockProfit, Get_transactions_multipul_sell) {
     int pricesValue[] = {1, 1};
     int pricesLength = sizeof(pricesValue) / sizeof(int);
     vector<int> prices(pricesValue, pricesValue + pricesLength);
-    vector<vector<int>> expectTransactions;
+    set<vector<int>> expectTransactions;
     int transactionValues1[] = {BUY, SELL};
-    expectTransactions.push_back(vector<int>(
+    expectTransactions.insert(vector<int>(
         transactionValues1, transactionValues1 + pricesLength));
     int transactionValues2[] = {PASS, PASS};
-    expectTransactions.push_back(vector<int>(
+    expectTransactions.insert(vector<int>(
         transactionValues2, transactionValues2 + pricesLength));
     
     StockProfit stockProfit(prices);
