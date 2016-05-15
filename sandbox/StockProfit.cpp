@@ -70,6 +70,9 @@ void StockProfit::generateTransactionsByFindBuySellPair(
             }
         }
     } else {
+        for (int i = sell + 2; i <= endOfDay; ++i) {
+            transaction[i] = PASS;
+        }
         transactions_.push_back(transaction);
     }
 }
@@ -77,10 +80,6 @@ void StockProfit::generateTransactionsByFindBuySellPair(
 vector<vector<int>> StockProfit::getTransactions() {
     if (prices_.size() == 0) {
         return transactions_;
-    } else if (prices_.size() == 1) {
-        vector<int> transaction;
-        transaction.push_back(PASS);
-        transactions_.push_back(transaction);
     } else {
         vector<int> transaction(prices_.size());
         generateTransactionsByFindBuySellPair(
