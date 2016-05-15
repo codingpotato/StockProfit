@@ -26,6 +26,7 @@ private:
     void calculateProfits();
     void generateTransactionsByFindBuySellPair(
         int endOfDay, vector<int>& transaction);
+    void fillPass(vector<int>& transaction, int fromDay, int toDay);
 
     vector<int> prices_;
     vector<int> maxProfitsAfterBuy_;

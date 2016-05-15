@@ -50,17 +50,13 @@ void StockProfit::generateTransactionsByFindBuySellPair(
                 transaction[sell] = SELL;
                 if (sell + 1 < (int)prices_.size()) {
                     transaction[sell + 1] = COOLDOWN;
-                    for (int i = sell + 2; i <= endOfDay; ++i) {
-                        transaction[i] = PASS;
-                    }
+                    fillPass(transaction, sell + 2, endOfDay);
                 }
                 for (int buy = sell - 1; buy >= 0; --buy) {
                     if (maxProfitsAfterBuy_[buy] + prices_[sell] == 
                         maxProfits_[sell]) {
                         transaction[buy] = BUY;
-                        for (int i = buy + 1; i < sell; ++i) {
-                            transaction[i] = PASS;
-                        }
+                        fillPass(transaction, buy + 1, sell - 1);
                         generateTransactionsByFindBuySellPair(
                             buy - 2, transaction);
                         break;
@@ -70,10 +66,15 @@ void StockProfit::generateTransactionsByFindBuySellPair(
             }
         }
     } else {
-        for (int i = 0; i <= endOfDay; ++i) {
-            transaction[i] = PASS;
-        }
+        fillPass(transaction, 0, endOfDay);
         transactions_.push_back(transaction);
+    }
+}
+
+void StockProfit::fillPass(vector<int>& transaction,
+    int fromDay, int toDay) {
+    for (int i = fromDay; i <= toDay; ++i) {
+        transaction[i] = PASS;
     }
 }
 
