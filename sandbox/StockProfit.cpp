@@ -50,7 +50,8 @@ void StockProfit::generateTransactionsByFindBuySellPair(
                 transaction[sell] = SELL;
                 if (sell + 1 < (int)prices_.size()) {
                     transaction[sell + 1] = COOLDOWN;
-                    fillPass(transaction, sell + 2, endOfDay);
+                    fillPass(transaction,
+                        sell + COOLDOWN_DISTANCE, endOfDay);
                 }
                 for (int buy = sell - 1; buy >= 0; --buy) {
                     if (maxProfitsAfterBuy_[buy] + prices_[sell] == 
@@ -58,7 +59,7 @@ void StockProfit::generateTransactionsByFindBuySellPair(
                         transaction[buy] = BUY;
                         fillPass(transaction, buy + 1, sell - 1);
                         generateTransactionsByFindBuySellPair(
-                            buy - 2, transaction);
+                            buy - COOLDOWN_DISTANCE, transaction);
                         break;
                     }
                 }
