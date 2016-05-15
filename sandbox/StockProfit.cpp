@@ -31,7 +31,7 @@ void StockProfit::calculateProfits() {
     maxProfitsWithStockInHand_[0] = maxProfitsAfterBuy_[0];
     maxProfitsAfterSell_[0] = 0;
     maxProfits_[0] = 0;
-    for (unsigned int i = 1; i < prices_.size(); ++i) {
+    for (int i = 1; i < (int)prices_.size(); ++i) {
         maxProfitsAfterBuy_[i] = (i > 1 ? maxProfits_[i - 2] : 0)
             - prices_[i];
         maxProfitsWithStockInHand_[i] = max(
