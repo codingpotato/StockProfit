@@ -45,8 +45,13 @@ void StockProfit::calculateProfits() {
 void StockProfit::generateTransactionsByFindBuySellPair(
     int endOfDay, vector<int>& transaction) {
     if (endOfDay >= 1) {
-        for (int sell = endOfDay; sell >= 1; --sell) {
+        for (int sell = endOfDay; sell >= 0; --sell) {
             if (maxProfits_[sell] == maxProfitsAfterSell_[sell]) {
+                if (sell == 0) {
+                    fillPass(transaction, 0, endOfDay);
+                    transactions_.push_back(transaction);
+                    break;
+                }
                 transaction[sell] = SELL;
                 if (sell + 1 < (int)prices_.size()) {
                     transaction[sell + 1] = COOLDOWN;
@@ -63,7 +68,6 @@ void StockProfit::generateTransactionsByFindBuySellPair(
                         break;
                     }
                 }
-                break;
             }
         }
     } else {
