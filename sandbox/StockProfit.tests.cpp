@@ -358,3 +358,25 @@ TEST(StockProfit, Get_transactions_multipul_sell) {
     StockProfit stockProfit(prices);
     ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
 }
+
+TEST(StockProfit, Get_transactions_multipul_buy) {
+    int pricesValue[] = {1, 1, 1};
+    int pricesLength = sizeof(pricesValue) / sizeof(int);
+    vector<int> prices(pricesValue, pricesValue + pricesLength);
+    set<vector<int>> expectTransactions;
+    int transactionValues1[] = {BUY, SELL, COOLDOWN};
+    expectTransactions.insert(vector<int>(
+        transactionValues1, transactionValues1 + pricesLength));
+    int transactionValues2[] = {BUY, PASS, SELL};
+    expectTransactions.insert(vector<int>(
+        transactionValues2, transactionValues2 + pricesLength));
+    int transactionValues3[] = {PASS, BUY, SELL};
+    expectTransactions.insert(vector<int>(
+        transactionValues3, transactionValues3 + pricesLength));
+    int transactionValues4[] = {PASS, PASS, PASS};
+    expectTransactions.insert(vector<int>(
+        transactionValues4, transactionValues4 + pricesLength));
+    
+    StockProfit stockProfit(prices);
+    ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
+}
