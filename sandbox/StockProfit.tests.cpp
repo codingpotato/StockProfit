@@ -359,7 +359,7 @@ TEST(StockProfit, Get_transactions_multipul_sell) {
     ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
 }
 
-TEST(StockProfit, Get_transactions_multipul_buy) {
+TEST(StockProfit, Get_transactions_multiple_buy) {
     int pricesValue[] = {1, 1, 1};
     int pricesLength = sizeof(pricesValue) / sizeof(int);
     vector<int> prices(pricesValue, pricesValue + pricesLength);
