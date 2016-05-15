@@ -46,7 +46,7 @@ void StockProfit::generateTransactionsByFindBuySellPair(
     int endOfDay, vector<int>& transaction) {
     if (endOfDay >= 1) {
         for (int sell = endOfDay; sell >= 0; --sell) {
-            if (maxProfits_[sell] == maxProfitsAfterSell_[sell]) {
+            if (maxProfitsAfterSell_[sell] == maxProfits_[endOfDay]) {
                 if (sell == 0) {
                     fillPass(transaction, 0, endOfDay);
                     transactions_.push_back(transaction);
