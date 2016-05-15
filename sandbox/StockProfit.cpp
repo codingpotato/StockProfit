@@ -65,7 +65,6 @@ void StockProfit::generateTransactionsByFindBuySellPair(
                         fillPass(transaction, buy + 1, sell - 1);
                         generateTransactionsByFindBuySellPair(
                             buy - COOLDOWN_DISTANCE, transaction);
-                        break;
                     }
                 }
             }
