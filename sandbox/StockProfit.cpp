@@ -70,7 +70,7 @@ void StockProfit::generateTransactionsByFindBuySellPair(
             }
         }
     } else {
-        for (int i = sell + 2; i <= endOfDay; ++i) {
+        for (int i = 0; i <= endOfDay; ++i) {
             transaction[i] = PASS;
         }
         transactions_.push_back(transaction);
