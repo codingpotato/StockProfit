@@ -78,9 +78,7 @@ void StockProfit::generateTransactionsByFindBuySellPair(
 }
 
 vector<vector<int>> StockProfit::getTransactions() {
-    if (prices_.size() == 0) {
-        return transactions_;
-    } else {
+    if (prices_.size() > 0) {
         vector<int> transaction(prices_.size());
         generateTransactionsByFindBuySellPair(
             prices_.size() - 1, transaction);
