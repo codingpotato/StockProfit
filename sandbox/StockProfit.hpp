@@ -36,6 +36,8 @@ private:
 
     vector<vector<int>> transactions_;
 
+    static const int COOLDOWN_DISTANCE = 2;
+
 };
 
 #endif
