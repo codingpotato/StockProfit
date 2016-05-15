@@ -342,3 +342,19 @@ TEST(StockProfit, Get_transactions_not_last_sell) {
     StockProfit stockProfit(prices);
     ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
 }
+
+TEST(StockProfit, Get_transactions_multipul_sell) {
+    int pricesValue[] = {1, 1};
+    int pricesLength = sizeof(pricesValue) / sizeof(int);
+    vector<int> prices(pricesValue, pricesValue + pricesLength);
+    vector<vector<int>> expectTransactions;
+    int transactionValues1[] = {BUY, SELL};
+    expectTransactions.push_back(vector<int>(
+        transactionValues1, transactionValues1 + pricesLength));
+    int transactionValues2[] = {PASS, PASS};
+    expectTransactions.push_back(vector<int>(
+        transactionValues2, transactionValues2 + pricesLength));
+    
+    StockProfit stockProfit(prices);
+    ASSERT_EQ(expectTransactions, stockProfit.getTransactions());
+}
